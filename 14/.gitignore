@@ -1,0 +1,4 @@
+hw5
+*.o
+*.swp
+all.c

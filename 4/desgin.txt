@@ -1,0 +1,21 @@
+/*
+	Author: John Andersen
+	Date: 02/19/2015
+	Description: Design Document
+*/
+
+
+
+I changed my last program slightly to make this program mainly because I wanted to see the performance difference with a hash table chaining with a ill or a tree. The result is by far the tree is faster. More than 18 times faster for just printing them all and over 36 times faster when finding matching data. This is pretty amazing. The code has some things that would be way better if I had more time but i think Im going to miss the 6 o'clock deadline by a few minutes so I rushed it hopefully it'll get an update for program 5. This is in vote where i have for loops that count to three and switches. No point in that for most of them.
+
+
+I think that the tree was a good choice for this assignment. However as you may have noticed I do my best to keep the data in the random order it entered in because if I save in sorted order then it will be a massive lll and that will defeat the purpose of using a tree. I'm not really sure how I was supposed to do this its been awhile since I watched the oscars so this is a vote for this actor who was in this movie for this award program. If i had wanted to do actors or movies and have the different awards it would have been easier because there would just be a name and no movie data member in the struct. Then I would have just interspersed actor row with movie rows and I just figured the actors normally get the award for being in a movie so i hope I got the concept right but If not then it would still work by setting the movie column of the tsv file to nothing and then use name for actor or movie name.
+
+
+The major inefficiency was the sudo indexing if it can be called that on the hash table. What I did was traverse the table such that it created an array in sorted order. This works great if you need to do a large amount of operations on the data such as a loop. because then I don't have to recurse through the tree to find the appropriate index every time and thats where the performance is majorly impacted. On the upside though Its very user friendly if you don't care about performance and want a nice sorted tree. although it should be said that even with this method of accessing the data it is way way faster than the previous implementation with a lll.
+
+
+I took the last program and used the same indexing with a hash table to find matching values. the difference is that this time the data structure the hash table uses is a tree rather than a dll. Overall as i mentioned the chaining with a binary tree is so much faster than with a list. The only really challenge I had was the remove function because there are either a lot of cases or i was doing something a little different than how Karla prescribes. What was happening was that all the cases except for removing a node where it's right was the inorder successor. This caused the nodes right to be set to itself and bam endless loop / recursion and that was no good.
+
+Personally I really wanted to implement the hash table of trees and I knew it would be fast but I had no idea it would be this fast. The templating I did with the hash table previously made it really really easy to use the tree as the chaining structure for it. I think templates are the greatest but I was hoping that Karla would touch on them because I want to make sure I am using them to their full potential and I also want to find out how to minimize compile time while using them.
+

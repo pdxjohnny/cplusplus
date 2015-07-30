@@ -1,0 +1,39 @@
+/*
+	Author: John Andersen
+	Date: 11/25/2014
+	Description: Writing part of Homework 4 and 5
+*/
+
+Test plan csv table:
+Test Case,Expected Result,Verified Results
+Input something other than add list remove or exit,Re-ask what the user wants to do,true
+Enter nothing after list,List all forecasts from all scources,true
+Enter something other than a number for a number data type,Re-ask for the values,true
+Try to list a source that doesn't exist,Nothing gets displayed,true
+Remove a index outside the size of the array / list,Nothing happens,true
+Add another forecast from an existing source,Forecast added doesn't overwrite existing,true
+List a lowercase source,Converts to uppercase and lists,true
+Incorrect comma count in csv,Data gets loaded wrong why'd they mess with the csv,true
+
+
+Ethics Homework 4:
+	The ethics of social media are the same that apply everywhere else. You should not share what is private to others on social media just as you would not like them to. You should also always be respectfull on social media. From the persepctive of a developer or api user we need to be sure not to have security flaws. Recent attacks and leaks have been due to applications which use the api to a service to grab a users private data. If these child applications do not manage the usernames and passwords carefully then a users information can be grabed by others for malicious intent.
+
+Ethics Homework 5:
+	When it comes to copying code you shouldn't. Code is the same as a book you wouldn't copy a book so your shouldn't copy code. The Open Source community being as great as it is has become a great resource for developers. Open Source projects provide a lot of great models for how to do things. If you are going to include an open source project you need to give credit to the creator of the code. This is analogous to citing your sources in a paper. For code that is not your own you should always make sure you are allowed to cite it and then cite it. For code that you find which is free under no licence to change and distribute you should use as an example. When you find code it is always best to use it as a guideline for what ever you are trying to achive rather than copy it. Also its very rare that you would even want to copy something directly. I've never looked soemthing up and found exactly what I'm looking for. While the liability is the main legal reason you shouldn't copy code the real best reason not to is that you will have no idea what its doing and have to go back and redo it all yourself because you don't know why it doesn't work.
+
+Terminology:
+	Pointer: Holds the address in memory of an instance of the data type it points at, or NULL which is address 0.
+	Address of Operator: Gives the address in memory of the instance of some data type.
+	Deallocate: To make the momory which something occupys available for use again.
+	Dereference: Find out what the data that a pointer points to is.
+	Dynamically Allocated Arrays: An array who's size is determined during the process's lifetime and not at compile time.
+	Malloc: Allocate a memory block on the heap that is a certain size, for example 1000 bytes.
+	Free: The act of deallocating memory which was malloc'd.
+	Stack: The memory that the program uses for variables that havent been created with the key word new or by a malloc. The stack will clean up any variables used in it.
+	Heap: The heap is unmanaged memory which you have to ask for with new or a malloc and then have to free or delete ([]).
+
+C++ Concepts:
+	A situation that would benifit from recursion would be deleteing the last node in a list. You could use it with any structure with multiple data members.
+	A stiuation that wouldn't benifit from recursion would be deleting the first node in a list.
+	Base Case means what ever a recursive function should check to continue would be false and then would not call itself again.

@@ -1,0 +1,29 @@
+/*
+	Author: John Andersen
+	Date: 11/9/2014
+	Description: Writing part of Homework 3
+*/
+
+Algorithm for testing software:
+	First off every piece of software is different and needs to be tested differently. That's my disclaimer that this is not a perfect algorithm. But if I were to write a general algorithm for testing software then it would be this.
+	1. Test every function with different varying inputs.
+		a. For example if you had a functions that splits a string you might test it by giving it different whitespace, say tabs instead of spaces or newlines.
+		b. You would want to pass the functions a different data type int he form of the correct. For example a string which is a number such as "1234".
+	2. Place printf / couts everywhere and output everything that's being minipulated.
+		a. This may seem like overkill but placing a print after every minipulation of a variable to see what everything is doing gives you a better idea of where things could / are going wrong.
+	3. Check any and all loops.
+		a. Infinate loops are terrible. Make sure to always test your loops.
+		b. This corresponds to number two with printing what's going on. It's eazy to tell if your hitting an infinate loop because your program will not respond. Print statements can tell you "hey im waiting on variable x to be y but its currently z". Which will help you identify problems more quickly.
+	4. Test the output of every function.
+		a. While this may seem obvious because of number one, testing / printing what the output of a function is right before you return can help find out what's going on.
+		b. Printing the recived output of a function is also important. If you perhaps though you were passing by reference but instead passed by value and really didn't change anything your going to have issues with your code. So always check what a function acctually returned.
+	For homework assignment 2 I neglected to test what would happend if the phrease already had a period at the end of it. I know that it would have added a second period but this was a faliure on my part to use number one of my testing algorithm.
+
+Style:
+	For program number 2 I didn't add as many comments as I should have. This time I tried to add to many comments because at least its super clear what is going on this way. I didn't comment all the variable and realized that some of my fuctions didn't have a header discribing what they did. I think I did a good job of writing lots of functions to avoid repetitive code. My algorithm was clear and I believe anyone would be able to understand what the purpose of my program was based on it. However I'm unclear on how long the algorithm should be. the one above is very long but testing is very important so I felt the need to write a lot. The algorithm in my understanding, what the program should do. Such as take input list courses add courses and save courses or tasks.
+
+Ethics:
+	I would say that Computer Reliability is the confidence we have in our computers to preform consistantly and produce the same results. Three issues that relate to this in an ethical way are data protection, viruses, and hacking. Honestly I don't understand whats being asked here but I'm taking a stab at it.
+	Data protection is a growing concern with more devices in our personal space. Celeberaties don't want their pictures leaked and defence firms don't want their passwords stolen. But this is a problem that has been around for as long as human nature. Where there is something valueable there issomeone who wants to steal it. This also ties in to hacking and the negitive impacts of hacking. I'm not saying that all hacking is bad obviously there are good causes but just to steal peoples cedit card information and such is not a good reason. On the note of Computer Reliability though w are trusting the software and a hardware on our computers to be secure and not have any gaps or holes which others may try to exploit. This all comes back to testing and why testing is so important. If you don;t test security flaws then someone will test them for you by exploiting them.
+	Viruses are another issue having to do with Computer Reliability. Furthing on the idea of exploiting holes in software, viruses can be used to minipulate a victims machine and also steal data which brings to mind the idea of data protection. Viruses are obviously unethical because they involve putting something, the software of the virus, on the computer of someone or some organisation, that do not know its there or wish to have it there.
+	I've really only discuesed the importance of testing software in order to make sure that holes aren't created which allow for access of a system which is not ones own. While this is a major part it is also the users responsibility to be responsible and aware and not put their computer as risk of such attacks.

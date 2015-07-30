@@ -1,0 +1,19 @@
+/*
+	Author: John Andersen
+	Date: 02/04/2015
+	Description: Design document
+*/
+
+Here are some statistics I captured when using test.cpp to test the efficiency of the stack versus the queue.
+At 1000 elements inserted
+
+The stack uses 45.0% of the memory that the queue uses at an array_size of 5
+The stack uses 35.0% of the memory that the queue uses at an array_size of 10
+The stack uses 31.8% of the memory that the queue uses at an array_size of 15
+The stack uses 30.0% of the memory that the queue uses at an array_size of 20
+The stack uses 26.0% of the memory that the queue uses at an array_size of 100
+
+
+The stack an queue both preform very differently and are used for very different situations. The data above shows how the stack is much better at using less memory. In addition I observed but don't have recorded here, that the stack took less time to add all of the data than the queue did. The stack was very handy for the undo operations where as the queue didn't seem to be needed as much for this program. The program because of its need to follow order of operations functions more as an equation constructor. The queue is a good way to keep a history however it doesn't seem very useful to have a history in this situation where there is already the stack to show the equation. I think that the queue of commands could have been replaced with a stack due to the nature of the undo command. Undo is supposed to remove the last calculation from the equation and by having the queue all I can do is tack on the reverse because taking from the front won't help me undo the last addition. The stack and queue were both very efficient except for the all methods which I thought would be helpful to the client. These methods traverse making them way less efficient than the standard methods associated with those data structures. However they are much easier for the client program to use because they eliminate the need to pop or queue and add to a new stack or queue just to see everything int he data structure. If I were to modify these ADT's I would optimize their all methods because I believe the rest are about as good as possible or close to.
+
+The biggest problem that I ran into when creating there ADT's was with the calculator. The calculator in this assignment does not create a running total but instead creates an equation due to its need to process calculations in accordance with the order of operations meaning that division and multiplication operations should be preformed before addition and subtraction. This meant that I had to find a way to break out of the normal addition and subtraction loop through the calculations when division or multiplication occurred. I did this by looking one operation ahead and if the current or next operation was division or multiplication I would start to preform operations on a special variable which was added to the result at the end of the sequence of division and multiplication. I used the queue as a log of all the commands added to the sack by the calculator. This way if I wanted to I could take the queue and run all of the entries through exec to produce the same equation that is in the stack. This is why instead of adding "undo" to the stack I would add the opposite of the operation I wanted to undo, because that mathematically cancels the operation.

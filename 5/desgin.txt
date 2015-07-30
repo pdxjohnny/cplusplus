@@ -1,0 +1,1 @@
+I changed my last program slightly to make this program mainly because I wanted to see the performance difference with a hash table chaining with a lll or a tree. The result is by far the tree is faster. More than 18 times faster for just printing them all and over 36 times faster when finding matching data. This is pretty amazing.
